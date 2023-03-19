@@ -15,12 +15,12 @@ def build_heap(data, n):
 
 def sift(i, n, data, count, swaps):
     t=i
-    ls=(t+1)*2-1
+    ls=(i+1)*2-1
 
     if ls<=n-1 and data[ls]<data[t]:
         t=ls
 
-    rs=(t+1)*2
+    rs=(i+1)*2
     if rs<=n-1 and data[rs]<data[t]:
         t=rs
 
@@ -29,6 +29,7 @@ def sift(i, n, data, count, swaps):
         count+=1
         swaps.append((i, t))
         sift(t, n, data, count, swaps)
+
 
 
 def main():
