@@ -1,5 +1,4 @@
 # python 3
-import numpy as np
 
 
 def build_heap(data, n):
@@ -47,7 +46,7 @@ def main():
         if not "a" in filepath:
             with open(filepath, "r") as f:
                 n = int(f.readline().strip())
-                data = np.array(list(map(int, f.readline().split())))
+                data=[int(x) for x in f.readline().split()]
 
 
     # input from keyboard
