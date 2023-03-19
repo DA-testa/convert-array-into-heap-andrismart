@@ -43,7 +43,7 @@ def main():
         data = list(map(int, input().split()))
 
     if "F" in entry:
-        filepath = "test/" + input()
+        filepath = "tests/" + input()
         if not "a" in filepath:
             with open(filepath, "r") as f:
                 n = int(f.readline().strip())
